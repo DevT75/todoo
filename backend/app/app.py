@@ -12,7 +12,8 @@ origins = ["*"]
 
 app = FastAPI(
     title="Todo",
-    openapi_url="/openapi.json"
+    docs_url="/api/docs",
+    openapi_url="/api/openapi.json"
 )
 
 app.add_middleware(
@@ -23,7 +24,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
+@app.get("/api")
 async def root():
     return {"message": "Hello World, Successfully Deployed!!!"}
 
