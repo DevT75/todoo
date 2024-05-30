@@ -8,7 +8,7 @@ from backend.app.core.config import settings
 from backend.app.models.todo_model import Todo
 from backend.app.models.user_model import User
 
-origins = ["http://localhost:3000"]
+origins = ["*"]
 
 app = FastAPI(
     title="Todo",
