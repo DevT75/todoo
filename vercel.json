@@ -2,7 +2,7 @@
     "devCommand": "uvicorn main:app --host 0.0.0.0 --port 8000",
     "builds": [
         {
-            "src": "backend/app/app.py",
+            "src": "main.py",
             "use": "@vercel/python"
         },
         {
@@ -13,7 +13,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "backend/app/app.py"
+            "dest": "main.py"
         }
     ]
 }
