@@ -5,26 +5,26 @@
       "use": "@vercel/next"
     },
     {
-      "src": "main.py",
+      "src": "backend/app/app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/api/users/(.*)",
-      "dest": "main.py"
+      "dest": "backend/app/app.py"
     },
     {
       "src": "/api/todo/(.*)",
-      "dest": "main.py"
+      "dest": "backend/app/app.py"
     },
     {
       "src": "/api/auth/(.*)",
-      "dest": "main.py"
+      "dest": "backend/app/app.py"
     },
     {
       "src": "/api/(.*)",
-      "dest": "main.py"
+      "dest": "backend/app/app.py"
     },
     {
       "src": "/(.*)",
