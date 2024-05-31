@@ -24,7 +24,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/api")
+@app.get("/api/python", summary="Hello World")
 async def root():
     return {"message": "Hello World, Successfully Deployed!!!"}
 
