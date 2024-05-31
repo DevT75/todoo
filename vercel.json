@@ -1,9 +1,13 @@
 {
-    "version" : 2,
+    "version": 2,
     "builds": [
         {
-            "src": "/backend/app/app.py",
+            "src": "backend/app/app.py",
             "use": "@vercel/python"
+        },
+        {
+            "src": "package.json",
+            "use": "@now/next"
         }
     ],
     "routes": [
