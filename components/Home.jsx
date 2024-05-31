@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 /* eslint-disable import/no-anonymous-default-export */
-
+"use client"
 import { useAuth } from '../context/AuthContext';
 import { useEffect } from 'react';
 import TodoList from '../components/TodoList';

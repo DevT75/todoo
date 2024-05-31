@@ -1,6 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 
 // eslint-disable-next-line import/no-anonymous-default-export, react/display-name
+"use client"
 import Modal from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import { useState } from 'react';

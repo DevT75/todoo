@@ -1,3 +1,4 @@
+"use client"
 import { createContext, useState, useContext, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { login, register } from '../lib/api';

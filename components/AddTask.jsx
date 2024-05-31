@@ -1,3 +1,4 @@
+"use client"
 import { useContext, useEffect, useState } from 'react'
 // import Modal from 'react-modal'
 import { Modal } from 'react-responsive-modal';

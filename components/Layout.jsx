@@ -11,7 +11,6 @@ const Layout = ({ children }) => {
     const u = JSON.parse(sessionStorage.getItem('user'));
     setUser(u);
   },[]);
-  console.log(user);
   const Router = useRouter();
   const [clicked, setClicked] = useState(false);
   const handleClick = () => {

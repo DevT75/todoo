@@ -1,3 +1,4 @@
+"use client"
 import { useState, useEffect } from 'react';
 import { fetchTodos, updateTodo, deleteTodo } from '../lib/api';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
