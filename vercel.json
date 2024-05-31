@@ -1,19 +1,23 @@
 {
-
+    "version": 2,
     "builds": [
-        {
-            "src": "main.py",
-            "use": "@vercel/python"
-        },
-        {
-            "src": "package.json",
-            "use": "@vercel/next"
-        }
+      {
+        "src": "package.json",
+        "use": "@vercel/next"
+      },
+      {
+        "src": "/backend/app/app.py",
+        "use": "@vercel/python"
+      }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "main.py"
-        }
+      {
+        "src": "/api/(.*)",
+        "dest": "/backend/app/app.py"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/pages/$1"
+      }
     ]
-}
+  }  
