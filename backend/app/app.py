@@ -20,13 +20,15 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
 @app.get("/api/python", summary="Hello World")
 async def root():
     return {"message": "Hello World, Successfully Deployed!!!"}
+
+app.include_router(router, prefix=settings.API_V1_STR)
 
 @app.on_event("startup")
 async def app_init():
@@ -43,5 +45,3 @@ async def app_init():
             Todo
         ]
     )
-    
-app.include_router(router, prefix=settings.API_V1_STR)
