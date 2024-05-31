@@ -1,5 +1,5 @@
 {
-    "version": 2,
+    "devCommand": "uvicorn main:app --host 0.0.0.0 --port 8000",
     "builds": [
         {
             "src": "backend/app/app.py",
@@ -7,7 +7,7 @@
         },
         {
             "src": "package.json",
-            "use": "@now/next"
+            "use": "@vercel/next"
         }
     ],
     "routes": [
