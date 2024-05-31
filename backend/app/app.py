@@ -8,7 +8,7 @@ from backend.app.core.config import settings
 from backend.app.models.todo_model import Todo
 from backend.app.models.user_model import User
 
-origins = ["*"]
+# origins = ["*"]
 
 app = FastAPI(
     title="Todo",
@@ -18,9 +18,9 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["*"],
 )
 
