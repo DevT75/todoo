@@ -20,7 +20,7 @@ class TodoOut(BaseModel):
     todo_id: UUID
     status: bool
     title: str
-    priority: str = None
+    priority: Optional[str] = None
     due_date: Optional[datetime] = None
     description: str
     created_at: datetime
