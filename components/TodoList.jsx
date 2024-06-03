@@ -62,7 +62,7 @@ const TodoList = () => {
             arr.sort((a, b) => {
                 return priorityValue(b.priority) - priorityValue(a.priority);
             });
-            return arr;
+            return arr.filter(todo => todo.status === false);
         });
     };
     const sortByDueDate = () => {
@@ -79,7 +79,7 @@ const TodoList = () => {
                     return 0; // Both due dates are null
                 }
             });
-            return arr;
+            return arr.filter(todo => todo.status === false);
         });
     };
     const getAll = () => {

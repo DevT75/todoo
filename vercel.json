@@ -5,26 +5,16 @@
       "use": "@vercel/next"
     },
     {
-      "src": "backend/app/app.py",
+      "src": "/backend/app/app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/api/users/(.*)",
-      "dest": "backend/app/app.py"
-    },
-    {
-      "src": "/api/todo/(.*)",
-      "dest": "backend/app/app.py"
-    },
-    {
-      "src": "/api/auth/(.*)",
-      "dest": "backend/app/app.py"
-    },
-    {
       "src": "/api/(.*)",
-      "dest": "backend/app/app.py"
+      "dest": "/backend/app/app.py",
+      "methods": ["GET","POST","PUT","DELETE","OPTIONS","PATCH"],
+      "headers": { "Access-Control-Allow-Origin": "*" }
     },
     {
       "src": "/(.*)",
